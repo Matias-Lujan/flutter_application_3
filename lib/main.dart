@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/core/router/app_router.dart';
+/* import 'package:flutter_application_2/presentation/screens/home_screen.dart';
+import 'package:flutter_application_2/presentation/screens/login_screen.dart'; */
 
 void main() {
   runApp(MainApp());
@@ -14,40 +17,8 @@ class MainApp extends StatefulWidget {
 class _MainAppState extends State<MainApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
-            child: Column(
-              children: [
-                ElevatedButton(
-                          onPressed: () {
-                            setState(() {});
-                          },
-                          child: Text('User'),
-                        ),
-                ElevatedButton(
-                          onPressed: () {
-                            setState(() {});
-                          },
-                          child: Text('Pass'),
-                        ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
-                  child: ElevatedButton(
-                              onPressed: () {
-                                setState(() {});
-                              },
-                              child: Text('Login'),
-                            ),
-                ),
-            
-              ],
-            ),
-          ),
-        ),
-      ),
+    return MaterialApp.router(
+      routerConfig: appRouter,
     );
   }
 }
