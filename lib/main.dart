@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/core/router/app_router.dart';
-/* import 'package:flutter_application_2/presentation/screens/home_screen.dart';
-import 'package:flutter_application_2/presentation/screens/login_screen.dart'; */
 
 void main() {
   runApp(MainApp());
