@@ -47,15 +47,16 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: () {
                     username = inputUsername.text;
                     password = inputPassword.text;
-
+//                  ************************************
                     debugPrint('inputUsername: ${inputUsername.text}');
                     debugPrint('inputPassword: ${inputPassword.text}');
 
                     debugPrint('username: ${username}');
                     debugPrint('password: ${password}');
+//                  ************************************                    
                     
                     if (username == 'admin' && password == 'admin') {
-                      context.push('/home');
+                      context.push('/home', extra: username);
                     }
                      setState(() {});
                   },

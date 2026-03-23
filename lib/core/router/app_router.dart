@@ -5,7 +5,7 @@ import 'package:go_router/go_router.dart';
 final appRouter = GoRouter(
   initialLocation: '/login',
   routes: [
-    GoRoute(path: '/home', builder: (context, state) => HomeScreen()),
+    GoRoute(path: '/home', builder: (context, state) => HomeScreen(username: state.extra as String)),
     GoRoute(path: '/login', builder: (context, state) => LoginScreen()),
   ],
 );

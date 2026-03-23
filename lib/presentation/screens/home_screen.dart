@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  final String username;
+
+  const HomeScreen({super.key, required this.username});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -21,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: const EdgeInsets.fromLTRB(0, 50, 0, 0),
           child: Column(
             children: [
-              Text('Welcome User'),
+              Text('Welcome ${widget.username}', style: TextStyle(fontSize: 24),),
             ]
           ),
         )
