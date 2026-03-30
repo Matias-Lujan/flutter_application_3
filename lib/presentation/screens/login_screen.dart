@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/domain/user.dart';
+import 'package:flutter_application_3/domain/user.dart';
 import 'package:go_router/go_router.dart';
 
 class LoginScreen extends StatefulWidget {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatefulWidget {
   final String username;
@@ -24,6 +25,13 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             children: [
               Text('Welcome ${widget.username}', style: TextStyle(fontSize: 24),),
+              SizedBox(height: 20,),
+              ElevatedButton(
+                onPressed: () {
+                  context.push('/championships');
+                },
+                child: Text('Go to Boca Juniors Championships'),
+              )
             ]
           ),
         )
